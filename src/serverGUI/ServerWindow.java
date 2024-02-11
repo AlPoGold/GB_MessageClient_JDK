@@ -23,7 +23,7 @@ public class ServerWindow extends JFrame {
     private boolean isServerUp;
 
     //widets
-    private JTextPane txtField;
+    private JTextArea txtField;
     private JButton btnStart;
     private JButton btnStop;
 
@@ -53,8 +53,8 @@ public class ServerWindow extends JFrame {
     }
 
     private JPanel createMainPanel() {
-        JPanel jPanel =new JPanel(new BorderLayout());
-        txtField = new JTextPane();
+        JPanel jPanel = new JPanel(new BorderLayout());
+        txtField = new JTextArea();
         txtField.setEditable(false);
         jPanel.add(txtField, BorderLayout.CENTER);
         JScrollPane scrollPane = new JScrollPane(txtField);
@@ -63,49 +63,26 @@ public class ServerWindow extends JFrame {
         jPanel.add(scrollPane, BorderLayout.CENTER);
 
 
-        JPanel jPanelBtn = new JPanel(new GridLayout(1,2));
+        JPanel jPanelBtn = new JPanel(new GridLayout(1, 2));
         btnStart = new JButton("START SESSION");
         btnStop = new JButton("STOP SESSION");
 
         btnStart.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseReleased(MouseEvent e) {
-                String message = String.format("Server was started "+ LocalDateTime.now().format(ServerService.formatDateTime) +"!\n");
-               appendText(message);
-
-               isServerUp = true;
-               serverService.setServerUp(isServerUp);
-               appendText(serverService.readLogging());
-                serverService.loggingChat(message);
-
-                for (ClientWindow client: serverService.getListClients()
-                     ) {
-                    client.updateSession();
-
-                }
-                serverService.sendStatusMessage();
-
+                updateStatus("Server was started ", true);
+                appendText(serverService.readLogging());
             }
         });
 
         btnStop.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseReleased(MouseEvent e) {
-                String message = String.format("Server was stopped "+ LocalDateTime.now().format(ServerService.formatDateTime) +"!\n");
-                appendText(message);
-                serverService.loggingChat(message);
-                isServerUp = false;
-                serverService.setServerUp(isServerUp);
-
-                for (ClientWindow client: serverService.getListClients()
-                ) {
-                    client.updateSession();
-
-                }
-                serverService.sendStatusMessage();
+                updateStatus("Server was stopped ", false);
 
             }
         });
+
         jPanelBtn.add(btnStart);
         jPanelBtn.add(btnStop);
         jPanelBtn.setAlignmentX(Component.CENTER_ALIGNMENT);
@@ -115,9 +92,24 @@ public class ServerWindow extends JFrame {
         return jPanel;
     }
 
+    private void updateStatus(String text, boolean isServer){
+        String message = String.format(text + LocalDateTime.now().format(ServerService.formatDateTime) + "!\n");
+        appendText(message);
+        serverService.loggingChat(message);
+        isServerUp = isServer;
+        serverService.setServerUp(isServerUp);
+
+        for (ClientWindow client : serverService.getListClients()
+        ) {
+            client.updateSession();
+
+        }
+        serverService.sendStatusMessage();
+    }
+
     public void appendText(String text) {
         try {
-            txtField.setText(txtField.getText() + text);
+            txtField.append(text);
         } catch (RuntimeException e) {
             e.printStackTrace();
         }

@@ -70,11 +70,13 @@ public class ServerService {
         stringBuilder.append("----------HISTORY: -----------\n");
 
         try (BufferedReader reader = new BufferedReader(new FileReader(".\\src\\serverGUI\\logging.txt"))) {
+            String firstLine = reader.readLine();
             String line;
-
+            if(firstLine==null){
+                return "History is empty!\n";
+            }else stringBuilder.append(firstLine).append("\n");
             while ((line = reader.readLine()) != null) {
-                stringBuilder.append(line);
-                stringBuilder.append("\n");
+                stringBuilder.append(line).append("\n");
             }
         } catch (IOException e) {
             e.printStackTrace();

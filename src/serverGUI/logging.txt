@@ -1,12 +1,46 @@
-Server was started 12-02-2024 00:03:11!
-00:03:40 third: hello!
-00:03:45 second: hi!
-00:03:54 first: whats up&&
-00:04:09 first: here
-00:04:12 second: where
-00:04:16 third: why
-Server was stopped 12-02-2024 00:04:29!
-Server was started 12-02-2024 00:04:35!
-00:04:51 second: hdhdjdkfk
-00:04:55 third: hfhfhhff
-Server was stopped 12-02-2024 00:04:57!
+Server was started 12-02-2024 00:31:58!
+00:32:44 third: hello!!!
+00:32:48 second: hi!!!
+00:32:52 first: there
+00:32:56 first: whyyy
+00:33:01 first: jiooo
+00:33:03 second: sadsa
+00:33:04 second: 
+00:33:05 second: 
+00:33:05 second: 
+00:33:05 second: 
+00:33:05 second: 
+00:33:05 second: 
+00:33:05 second: 
+00:33:06 second: 
+00:33:06 second: 
+00:33:06 second: 
+00:33:06 second: 
+00:33:06 second: 
+00:33:06 second: 
+00:33:09 third: sss
+00:33:09 third: 
+00:33:09 third: 
+00:33:09 third: 
+00:33:10 third: 
+00:33:10 third: 
+00:33:10 third: 
+00:33:10 third: 
+Server was stopped 12-02-2024 00:33:14!
+Server was started 12-02-2024 00:33:21!
+Server was stopped 12-02-2024 00:33:25!
+Server was started 12-02-2024 00:34:05!
+00:34:22 ivan_igorevich: ygygy
+00:34:25 ivan_igorevich: www
+00:34:32 rtyuio: dsf
+00:34:36 rtyuio: sfsf
+00:34:37 rtyuio: 
+00:34:37 rtyuio: 
+00:34:37 rtyuio: 
+00:34:37 rtyuio: 
+00:34:37 rtyuio: 
+00:34:37 rtyuio: 
+00:34:38 rtyuio: 
+00:34:38 rtyuio: 
+Server was stopped 12-02-2024 00:34:40!
+Server was started 12-02-2024 00:34:46!
