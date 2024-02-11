@@ -1,0 +1,12 @@
+Server was started 12-02-2024 00:03:11!
+00:03:40 third: hello!
+00:03:45 second: hi!
+00:03:54 first: whats up&&
+00:04:09 first: here
+00:04:12 second: where
+00:04:16 third: why
+Server was stopped 12-02-2024 00:04:29!
+Server was started 12-02-2024 00:04:35!
+00:04:51 second: hdhdjdkfk
+00:04:55 third: hfhfhhff
+Server was stopped 12-02-2024 00:04:57!
